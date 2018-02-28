@@ -1,0 +1,12 @@
+
+	Welch Two Sample t-test
+
+data:  df$sOI[df$Genre == "Pop"] and df$sOI[df$Genre == "Country"]
+t = 1.4768, df = 93.768, p-value = 0.1431
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.2425955  1.6507911
+sample estimates:
+mean of x mean of y 
+ 2.827359  2.123262 
+

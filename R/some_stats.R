@@ -15,22 +15,22 @@ p <- ggplot(df, aes(x = Genre, y = OI)) +
         xlab('Genre') + ylab('Objectification Count')
 p
 capture.output(t.test(df$sOI[df$Genre=='Pop'], df$sOI[df$Genre=='Country']),
-               file = 'overall_t_test.txt')
+               file = './output/overall_cont.txt')
 dev.off()
 
 #for each individual one, continuous scale
 for (i in 1:5) {
     to_plot <- df[,c('Genre', paste('F', i, sep = ''))]
     colnames(to_plot) <- c('Genre', 'ObjFreq')
-    png(paste('./images/obj_type', i, '_by_genre.png', sep = ''))
+    png(paste('./images/obj_count', i, '_by_genre.png', sep = ''))
     p <- ggplot(to_plot, aes(x = Genre, y = ObjFreq)) +
             geom_boxplot() + ggtitle(paste("Objectification of Type", i, "by Genre")) + 
             xlab('Genre') + ylab('Objectification Count')
-    p
+    print(p)
     dev.off()
     capture.output(wilcox.test(to_plot$ObjFreq[df$Genre=='Pop'], 
                           to_plot$ObjFreq[df$Genre=='Country']),
-                   file = paste("./output/t_test_F", i, ".txt", sep = ""))
+                   file = paste("./output/cont_F", i, ".txt", sep = ""))
 }
 
 #Overall Objectification on the discrete scale
@@ -41,7 +41,7 @@ p <- ggplot(to_plot, aes(x = Genre, y = sOI_Ind)) +
     geom_bar(stat = 'identity')
 p
 capture.output(chisq.test(table(to_plot$sOI_Ind, to_plot$Genre)),
-               file = paste("./output/chsq_test_overall"))
+               file = paste("./output/chsq_test_overall.txt"))
 dev.off()
 
 #for each individual one, discrete scale
@@ -49,10 +49,12 @@ for (i in 1:5) {
     to_plot <- df[,c('Genre', paste('F', i, sep = ''))]
     colnames(to_plot) <- c('Genre', 'ObjFreq')
     to_plot$sOI_Ind <- as.numeric(to_plot[,'ObjFreq'] > 0)
-    png(paste('./images/obj_type', i, '_by_genre.png', sep = ''))
+    png(paste('./images/obj_freq', i, '_by_genre.png', sep = ''))
     p <- ggplot(to_plot, aes(x = Genre, y = sOI_Ind)) +
-        geom_bar(stat = 'identity')
-    p
+        geom_bar(stat = 'identity') + 
+        ggtitle(paste("Objectification of Type", i, "by Genre")) + 
+        xlab('Genre') + ylab('Objectification Frequency')
+    print(p)
     dev.off()
     capture.output(chisq.test(table(to_plot$sOI_Ind, to_plot$Genre)),
                    file = paste("./output/chsq_test_F", i, ".txt", sep = ""))
