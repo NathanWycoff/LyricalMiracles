@@ -1,6 +1,0 @@
-
-	Pearson's Chi-squared test with Yates' continuity correction
-
-data:  table(to_plot$sOI_Ind, to_plot$Genre)
-X-squared = 0.61122, df = 1, p-value = 0.4343
-

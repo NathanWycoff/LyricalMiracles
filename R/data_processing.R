@@ -35,5 +35,9 @@ df <- df[,-c(8,9)]
 #Sometimes, we might be interested in the square roots of counts.
 df$sOI <- sqrt(df$OI)
 
+#Code sex
+df$Sex <- c('Female', 'Mixed', 'Male')[((1 - df$Female) + df$Male) + 1]
+df$Female <- df$Male <- NULL
+
 #Store the data as a csv
 write.csv(df, './data/fem_obj_proc.csv', row.names = FALSE)

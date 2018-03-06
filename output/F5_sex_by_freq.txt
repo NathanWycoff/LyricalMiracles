@@ -1,0 +1,15 @@
+formula: ord ~ target
+
+ link  threshold nobs logLik AIC    niter max.grad cond.H 
+ logit flexible  100  -72.26 150.52 5(0)  3.93e-09 1.5e+01
+
+Coefficients:
+           Estimate Std. Error z value Pr(>|z|)    
+targetTRUE  -1.9917     0.4719  -4.221 2.43e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -2.6068     0.3981  -6.548
+2|3  -1.6390     0.3287  -4.985

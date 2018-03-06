@@ -1,0 +1,7 @@
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  target[df$Genre == "Pop"] and target[df$Genre == "Country"]
+W = 1101.5, p-value = 0.2618
+alternative hypothesis: true location shift is not equal to 0
+

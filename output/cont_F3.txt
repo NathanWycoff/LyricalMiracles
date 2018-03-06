@@ -1,7 +1,0 @@
-
-	Wilcoxon rank sum test with continuity correction
-
-data:  to_plot$ObjFreq[df$Genre == "Pop"] and to_plot$ObjFreq[df$Genre == "Country"]
-W = 1212.5, p-value = 0.7676
-alternative hypothesis: true location shift is not equal to 0
-

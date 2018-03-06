@@ -1,0 +1,6 @@
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  table(target > 0, df$Genre)
+X-squared = 6.0569, df = 1, p-value = 0.01385
+
