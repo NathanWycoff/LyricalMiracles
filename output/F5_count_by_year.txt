@@ -1,1 +1,20 @@
-[1] "nothing yet"
+
+Call:
+lm(formula = target ~ I(as.factor(df$Year)))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+ -5.50  -2.25  -1.35  -1.00  46.50 
+
+Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)
+(Intercept)                  2.250      1.693   1.329    0.187
+I(as.factor(df$Year))2013   -0.150      2.394  -0.063    0.950
+I(as.factor(df$Year))2014   -0.900      2.394  -0.376    0.708
+I(as.factor(df$Year))2015   -1.250      2.394  -0.522    0.603
+I(as.factor(df$Year))2016    3.250      2.394   1.358    0.178
+
+Residual standard error: 7.571 on 95 degrees of freedom
+Multiple R-squared:  0.04483,	Adjusted R-squared:  0.004609 
+F-statistic: 1.115 on 4 and 95 DF,  p-value: 0.3543
+
