@@ -22,7 +22,7 @@ toplot <- function(target, desc) {
 
 #Do an ANOVA to see if any year was sig diff from others
 test <- function(target) {
-    summary(lm(target ~ I(as.factor(df$Year))))
+    summary(lm(I(sqrt(target)) ~ I(as.factor(df$Year))))
 }
 
 #Do the tests!

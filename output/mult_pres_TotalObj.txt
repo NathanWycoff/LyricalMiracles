@@ -1,0 +1,30 @@
+
+Call:
+glm(formula = I(target > 0) ~ Sex + Genre + Year, family = binomial, 
+    data = df)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.1748  -1.1863   0.5226   0.9617   1.2039  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)  
+(Intercept)  0.18692    0.70667   0.265   0.7914  
+SexMale     -0.16600    0.65772  -0.252   0.8007  
+SexMixed     1.18287    0.96654   1.224   0.2210  
+GenrePop     0.34417    0.46453   0.741   0.4588  
+Year2013     0.23038    0.68473   0.336   0.7365  
+Year2014     1.90119    0.88919   2.138   0.0325 *
+Year2015     0.36694    0.69266   0.530   0.5963  
+Year2016    -0.08294    0.67559  -0.123   0.9023  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 125.37  on 99  degrees of freedom
+Residual deviance: 114.36  on 92  degrees of freedom
+AIC: 130.36
+
+Number of Fisher Scoring iterations: 4
+
