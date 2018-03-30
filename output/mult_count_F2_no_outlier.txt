@@ -1,0 +1,28 @@
+
+Call:
+glm(formula = target ~ Sex + Genre + Year, family = quasipoisson, 
+    data = df)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.2495  -1.7134  -1.3157   0.7965   4.6205  
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  0.23491    0.58003   0.405    0.686
+SexMale      0.28324    0.52707   0.537    0.592
+SexMixed     0.16382    0.66273   0.247    0.805
+GenrePop    -0.37930    0.32806  -1.156    0.251
+Year2013     0.41008    0.48812   0.840    0.403
+Year2014     0.24495    0.50479   0.485    0.629
+Year2015    -0.06717    0.54213  -0.124    0.902
+Year2016    -0.28218    0.57101  -0.494    0.622
+
+(Dispersion parameter for quasipoisson family taken to be 3.656562)
+
+    Null deviance: 306.01  on 98  degrees of freedom
+Residual deviance: 290.34  on 91  degrees of freedom
+AIC: NA
+
+Number of Fisher Scoring iterations: 6
+
